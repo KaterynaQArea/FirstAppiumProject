@@ -44,7 +44,7 @@ public class AndroidTest {
         MobileElement filterIcon = (MobileElement) driver.findElementByAccessibilityId("test-Modal Selector Button");
         filterIcon.click();
 
-        MobileElement sortByNameFromZtoA = (MobileElement) driver.findElementByXPath("//android.widget.ScrollView[@content-desc=\"Selector container\"]/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView");
+        MobileElement sortByNameFromZtoA = (MobileElement) driver.findElementByXPath("//android.widget.TextView[@text=\"Name (Z to A)\"]");
         sortByNameFromZtoA.click();
 
         MobileElement listViewIcon = (MobileElement) driver.findElementByAccessibilityId("test-Toggle");
