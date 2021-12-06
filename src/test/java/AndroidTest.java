@@ -26,49 +26,50 @@ public class AndroidTest {
         AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), desiredCapabilities);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
-        MobileElement usernameField = (MobileElement) driver.findElementByAccessibilityId("test-Username");
+        MobileElement usernameField = driver.findElementByAccessibilityId("test-Username");
         usernameField.sendKeys("standard_user");
 
-        MobileElement passwordField = (MobileElement) driver.findElementByAccessibilityId("test-Password");
+        MobileElement passwordField = driver.findElementByAccessibilityId("test-Password");
         passwordField.sendKeys("secret_sauce");
 
-        MobileElement loginButton = (MobileElement) driver.findElementByAccessibilityId("test-LOGIN");
+        MobileElement loginButton = driver.findElementByAccessibilityId("test-LOGIN");
         loginButton.click();
 
-        MobileElement menuIcon = (MobileElement) driver.findElementByAccessibilityId("test-Menu");
+        MobileElement menuIcon = driver.findElementByAccessibilityId("test-Menu");
         menuIcon.click();
 
-        MobileElement allItems = (MobileElement) driver.findElementByAccessibilityId("test-ALL ITEMS");
+        MobileElement allItems = driver.findElementByAccessibilityId("test-ALL ITEMS");
         allItems.click();
 
-        MobileElement filterIcon = (MobileElement) driver.findElementByAccessibilityId("test-Modal Selector Button");
+        MobileElement filterIcon = driver.findElementByAccessibilityId("test-Modal Selector Button");
         filterIcon.click();
 
-        MobileElement sortByNameFromZtoA = (MobileElement) driver.findElementByXPath("//android.widget.TextView[@text=\"Name (Z to A)\"]");
+        MobileElement sortByNameFromZtoA = driver.findElementByXPath("//android.widget.TextView[@text=\"Name (Z to A)\"]");
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         sortByNameFromZtoA.click();
 
-        MobileElement listViewIcon = (MobileElement) driver.findElementByAccessibilityId("test-Toggle");
+        MobileElement listViewIcon = driver.findElementByAccessibilityId("test-Toggle");
         listViewIcon.click();
 
-        MobileElement addFirstProduct = (MobileElement) driver.findElementByAccessibilityId("test-ADD TO CART");
+        MobileElement addFirstProduct = driver.findElementByAccessibilityId("test-ADD TO CART");
         addFirstProduct.click();
 
-        MobileElement cartButton = (MobileElement) driver.findElementByAccessibilityId("test-Cart");
+        MobileElement cartButton = driver.findElementByAccessibilityId("test-Cart");
         cartButton.click();
 
-        MobileElement checkoutButton = (MobileElement) driver.findElementByAccessibilityId("test-CHECKOUT");
+        MobileElement checkoutButton = driver.findElementByAccessibilityId("test-CHECKOUT");
         checkoutButton.click();
 
-        MobileElement nameField = (MobileElement) driver.findElementByAccessibilityId("test-First Name");
+        MobileElement nameField = driver.findElementByAccessibilityId("test-First Name");
         nameField.sendKeys("Kateryna");
 
-        MobileElement lastnameField = (MobileElement) driver.findElementByAccessibilityId("test-Last Name");
+        MobileElement lastnameField = driver.findElementByAccessibilityId("test-Last Name");
         lastnameField.sendKeys("Samilyk");
 
-        MobileElement zipcodeField = (MobileElement) driver.findElementByAccessibilityId("test-Zip/Postal Code");
+        MobileElement zipcodeField = driver.findElementByAccessibilityId("test-Zip/Postal Code");
         zipcodeField.sendKeys("61105");
 
-        MobileElement continueButton = (MobileElement) driver.findElementByAccessibilityId("test-CONTINUE");
+        MobileElement continueButton = driver.findElementByAccessibilityId("test-CONTINUE");
         continueButton.click();
 
         driver.quit();
